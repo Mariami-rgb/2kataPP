@@ -12,7 +12,7 @@ public class UserDaoJDBCImpl implements UserDao {
     private Connection conn = Util.getConnection();
     private final String CREATE_TABLE_SQL = "create TABLE IF NOT EXISTS Users(id BIGINT NOT NULL AUTO_INCREMENT, name Varchar(255) NOT NULL, lastName VARCHAR(255) NOT NULL, age TINYINT NOT NULL, PRIMARY KEY (id))";
     private final String DROP_TABLE_SQL = "DROP TABLE IF EXISTS Users";
-    private final String SAVE_USER_SQL = "INSERT INTO Usegit rs( name, lastName, age) VALUES (?, ?, ?)";
+    private final String SAVE_USER_SQL = "INSERT INTO Users( name, lastName, age) VALUES (?, ?, ?)";
     private final String REMOVE_USER_SQL = "DELETE FROM Users WHERE id = ?";
     private final String GET_USERS_SQL = "SELECT * FROM Users";
     private final String CLEAN_TABLE_SQL = "TRUNCATE TABLE Users";
