@@ -38,7 +38,6 @@ public class Util {
         if (sessionFactory == null) {
             try {
                 Configuration configuration = new Configuration();
-
                 Properties properties = new Properties();
                 properties.put(Environment.DRIVER, driver);
                 properties.put(Environment.URL, connectionURL);
