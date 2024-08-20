@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDaoHibernateImpl implements UserDao {
-    SessionFactory sessionFactory = Util.getSessionFactory();
+    private SessionFactory sessionFactory = Util.getSessionFactory();
     private final String CREATE_TABLE_SQL = "create TABLE IF NOT EXISTS Users(id BIGINT NOT NULL AUTO_INCREMENT, name Varchar(255) NOT NULL, lastName VARCHAR(255) NOT NULL, age TINYINT NOT NULL, PRIMARY KEY (id))";
     private final String DROP_TABLE_SQL = "DROP TABLE IF EXISTS Users";
 
